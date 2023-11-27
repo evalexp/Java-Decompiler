@@ -11,8 +11,7 @@
 Full Help:
 
 ```bash
-usage: java-decompiler.py [-h] (-c | -w | -j | -f | -jf | -ndcp) -i INPUT -o OUTPUT [-T THREAD] [-cp]
-                          [-fd FORCE_DECOMPILE [FORCE_DECOMPILE ...]]
+usage: java-decompiler.py [-h] (-c | -w | -j | -f | -jf | -ndcp) -i INPUT -o OUTPUT [-T THREAD] [-cp] [-dp DECOMPILE_PACKAGE [DECOMPILE_PACKAGE ...]]
 
 Java Decompile
 
@@ -22,7 +21,7 @@ options:
   -w, --war             War input, decompile single war without lib jar decompilation
   -j, --jar             Jar input, decompile single jar
   -f, --folder          Folder input, would decompile all classes in the folder
-  -jf, --jar-folder     Jar Folder input, would smartly analysis and decompile the proper jar file
+  -jf, --jar-folder     Jar Folder input, would only decompile the jar which contains the specific package
   -ndcp, --no-decompile-copy
                         Only copy the resources file, would not decompile
   -i INPUT, --input INPUT
@@ -32,8 +31,8 @@ options:
   -T THREAD, --thread THREAD
                         Decompile thread count
   -cp, --copy           Copy resources file(without class extension) to the destination, only work on -f/--folder
-  -fd FORCE_DECOMPILE [FORCE_DECOMPILE ...], --force-decompile FORCE_DECOMPILE [FORCE_DECOMPILE ...]
-                        Ignore smart analysis and force decompile the specific jar
+  -dp DECOMPILE_PACKAGE [DECOMPILE_PACKAGE ...], --decompile-package DECOMPILE_PACKAGE [DECOMPILE_PACKAGE ...]
+                        Specify the package name to be decompiled
 ```
 
 ### Decompile a single class
