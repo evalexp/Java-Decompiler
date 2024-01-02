@@ -47,13 +47,13 @@ py -3 java-decompiler.py -c -i test.class -o ./src
 py -3 java-decompiler.py -j -i test.jar -o ./src
 ```
 
-### Decompiler a Class Folder
+### Decompile a Class Folder
 
 ```bash
 py -3 java-decompiler.py -f -i tomcat/webapps/ROOT -o ./src
 ```
 
-### Decompiler a Jar Folder
+### Decompile a Jar Folder
 
 > `-dp/--decompile-package` support `*` to match any word
 ```bash
@@ -64,7 +64,7 @@ py -3 java-decompiler.py -jf -i tomcat/webapps/ROOT/WEB-INF/lib -o ./src -dp com
 py -3 java-decompiler.py -jf -i tomcat/webapps/ROOT/BOOT-INF/lib -o ./src -dp com.testa com.testb
 ```
 
-### Decompiler a War
+### Decompile a War
 
 ```bash
 py -3 java-decompiler.py -w -i tomcat/webapps/app.war -o ./src
